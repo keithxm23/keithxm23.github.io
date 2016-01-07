@@ -2,7 +2,7 @@
 title: Keith's github page
 email: keithxm23@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This page is under construction
+  This page is under construction. Meanwhile you may visit my earlier website at keithxm23v2.herokuapp.com
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: keithxm23
