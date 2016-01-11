@@ -52,10 +52,11 @@ Sunderland,6,15,2,3,0,1
 <div id="svgPlaceholder">
 </div>
 
-I've been teaching myself [D3.js] and thought this would be an interesting project
-to try out. The data is from [football-data.co.uk] which includes match results and betting odds. The 'predicted' result is simply the result that
-had the best odds. An interesting observation was that bookmakers rarely (or in this case, never) provide the best odds for a draw result. There's a really interesting science
+The 'predicted' result is simply the result that had the best odds. An interesting observation was that bookmakers rarely (or in this case, never) provide the best odds for a draw result. There's a really interesting science
 behind this, but that is outside the scope of this post.
+
+I've been teaching myself [D3.js] and thought this would be an interesting project
+to try out. The data is from [football-data.co.uk] which includes match results and betting odds. 
 
 
 
