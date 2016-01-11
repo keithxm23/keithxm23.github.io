@@ -59,6 +59,8 @@ function render(data, marker){
     .attr("width", outerWidth)
     .attr("height", outerHeight)
     ;
+  var pageOffset = svg[0][0].getBoundingClientRect();
+  console.log(pageOffset);
   var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     ;
@@ -149,8 +151,8 @@ function render(data, marker){
       .attr("fill", yData.filter(function(obj){return obj.key==d.key})[0].colorHighlighted);
 
       //Get this bar's x/y values, then augment for the tooltip
-      var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 2;
-      var yPosition = parseFloat(d3.select(this).attr("y"));
+      var xPosition = pageOffset.left + parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 2;
+      var yPosition = pageOffset.top + parseFloat(d3.select(this).attr("y"));
       //Update the tooltip position and value
       d3.select("#tooltip")
         .style("left", xPosition + "px")
