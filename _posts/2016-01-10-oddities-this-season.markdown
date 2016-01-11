@@ -10,6 +10,7 @@ extra_js:
   - /js/odds.js
 ---
 Hover over (or if you're on mobile, click) the bars to view the relevant match details.
+This is best viewed on a desktop browser though.
 <script type="text/javascript">
   //Load from CSV File
   // d3.csv("odds_beaten.csv", render);
