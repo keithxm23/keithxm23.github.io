@@ -60,6 +60,9 @@ function render(data, marker){
     .attr("height", outerHeight)
     ;
   var pageOffset = svg[0][0].getBoundingClientRect();
+  //http://stackoverflow.com/questions/25630035/javascript-getboundingclientrect-changes-while-scrolling
+  var yScrollOffset = window.scrollY;
+  var xScrollOffset = window.scrollX;
 
   var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
@@ -151,8 +154,8 @@ function render(data, marker){
       .attr("fill", yData.filter(function(obj){return obj.key==d.key})[0].colorHighlighted);
 
       //Get this bar's x/y values, then augment for the tooltip
-      var xPosition = pageOffset.left + parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 2;
-      var yPosition = pageOffset.top + parseFloat(d3.select(this).attr("y")) + window.scrollY; //http://stackoverflow.com/questions/25630035/javascript-getboundingclientrect-changes-while-scrolling
+      var xPosition = pageOffset.left + parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() / 2 + xScrollOffset;
+      var yPosition = pageOffset.top + parseFloat(d3.select(this).attr("y")) + yScrollOffset;
       //Update the tooltip position and value
       d3.select("#tooltip")
         .style("left", xPosition + "px")
