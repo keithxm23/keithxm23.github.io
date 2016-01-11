@@ -9,6 +9,7 @@ extra_js:
   - https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js
   - /js/odds.js
 ---
+Hover over (or if you're on mobile, click) the bars to view the relevant match details.
 <script type="text/javascript">
   //Load from CSV File
   // d3.csv("odds_beaten.csv", render);
@@ -25,6 +26,7 @@ extra_js:
     <table id="value">
     </table>
 </div>
+<pre id="csvdata">
 team,oddities,points,l2w,l2d,w2d,w2l
 Arsenal,6,42,0,0,3,3
 Leicester,12,40,5,5,2,0
@@ -51,11 +53,10 @@ Sunderland,6,15,2,3,0,1
 </div>
 
 I've been teaching myself [D3.js] and thought this would be an interesting project
-to try out. The data is from [football-data.co.uk] which includes match results and betting odds. The 'predicted' result is simply the one that
+to try out. The data is from [football-data.co.uk] which includes match results and betting odds. The 'predicted' result is simply the result that
 had the best odds. An interesting observation was that bookmakers rarely (or in this case, never) provide the best odds for a draw result. There's a really interesting science
-behind this, but that would be outside the scope of this post.
+behind this, but that is outside the scope of this post.
 
-<pre id="csvdata">
 
 
 [D3.js]:       http://d3js.org/
