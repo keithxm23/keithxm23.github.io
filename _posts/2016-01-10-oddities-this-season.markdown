@@ -20,12 +20,11 @@ extra_js:
     render(parsedOddsData, "#svgPlaceholder");
   };
 </script>
-I've been teaching myself [D3.js] and thought this would be an interesting project
-to try out. The data is from [football-data.co.uk] which includes match results and betting odds. The 'predicted' result is simply the one that
-had the best odds. An interesting observation was that bookmakers rarely (or in this case, never) provide the best odds for a draw result. There's a really interesting science
-behind this, but that would be outside the scope of this post.
-
-<pre id="csvdata">
+<!-- Div to be used for tooltip -->
+<div id="tooltip" class="hidden">
+    <table id="value">
+    </table>
+</div>
 team,oddities,points,l2w,l2d,w2d,w2l
 Arsenal,6,42,0,0,3,3
 Leicester,12,40,5,5,2,0
@@ -50,6 +49,14 @@ Sunderland,6,15,2,3,0,1
 
 <div id="svgPlaceholder">
 </div>
+
+I've been teaching myself [D3.js] and thought this would be an interesting project
+to try out. The data is from [football-data.co.uk] which includes match results and betting odds. The 'predicted' result is simply the one that
+had the best odds. An interesting observation was that bookmakers rarely (or in this case, never) provide the best odds for a draw result. There's a really interesting science
+behind this, but that would be outside the scope of this post.
+
+<pre id="csvdata">
+
 
 [D3.js]:       http://d3js.org/
 [football-data.co.uk]: http://www.football-data.co.uk/englandm.php
