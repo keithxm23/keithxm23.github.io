@@ -9,8 +9,8 @@ extra_js:
   - https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js
   - /js/odds.js
 ---
-Hover over (or if you're on mobile, click) the bars to view the relevant match details.
-This is best viewed on a desktop browser though.
+*Hover over (or if you're on mobile, click) the bars to view the relevant match details.
+This is best viewed on a desktop browser. Switch to landscape if you're on mobile for a better viewing experience.*
 <script type="text/javascript">
   //Load from CSV File
   // d3.csv("odds_beaten.csv", render);
