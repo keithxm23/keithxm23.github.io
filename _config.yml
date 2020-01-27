@@ -10,3 +10,5 @@ github_username:  keithxm23
 
 # Build settings
 markdown: kramdown
+
+comments: true
